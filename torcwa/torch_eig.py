@@ -37,7 +37,9 @@ class Eig(torch.autograd.Function):
         XH = torch.transpose(torch.conj(eigvec),-2,-1)
         tmp = torch.conj(F) * torch.matmul(XH, grad_eigvec)
 
-        grad = torch.matmul(torch.matmul(torch.inverse(XH), grad_eigval + tmp), XH)
+        eye = torch.eye(XH.size(-1), dtype=XH.dtype, device=XH.device)
+        XH_inv = torch.linalg.solve(XH, eye)
+        grad = torch.matmul(torch.matmul(XH_inv, grad_eigval + tmp), XH)
         if not torch.is_complex(ctx.input):
             grad = torch.real(grad)
 
