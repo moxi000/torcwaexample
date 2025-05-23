@@ -8,7 +8,7 @@ setup(
     author_email='kch3782@snu.ac.kr',
     license='LGPL',
     url='https://github.com/kch3782/torcwa',
-    install_requires=['torch>=1.10.1'],
+    install_requires=['torch>=2.0'],
     dependency_links=['https://download.pytorch.org/whl/torch_stable.html'],
     packages=find_packages(),
     keywords='torcwa',
