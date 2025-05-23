@@ -47,7 +47,7 @@ Installation
 
 	* Python version 3.8 or higher
 
-	* PyTorch version 1.10.1 or higher
+        * PyTorch version 2.0 or higher
 
 	* For GPU operation, GPUs that support CUDA operations
 
@@ -55,7 +55,7 @@ Installation
 ```
 $ pip install torcwa
 ```
-* If the PyTorch version is lower than the required, it will automatically install PyTorch 1.10.1 or higher, but the CPU-only PyTorch or incompatible version may be installed. Therefore, **before installing using the above command, please install PyTorch version that is compatible with GPU**.
+* If the PyTorch version is lower than the required, it will automatically install PyTorch 2.0 or higher, but the CPU-only PyTorch or incompatible version may be installed. Therefore, **before installing using the above command, please install a GPU-compatible PyTorch version**.
 
 <br/>
 

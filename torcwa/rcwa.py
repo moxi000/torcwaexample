@@ -63,8 +63,8 @@ class rcwa:
 
         # Fourier order
         self.order = order
-        self.order_x = torch.linspace(-self.order[0],self.order[0],2*self.order[0]+1,dtype=torch.int64,device=self._device)
-        self.order_y = torch.linspace(-self.order[1],self.order[1],2*self.order[1]+1,dtype=torch.int64,device=self._device)
+        self.order_x = torch.arange(-self.order[0], self.order[0]+1, dtype=torch.int64, device=self._device)
+        self.order_y = torch.arange(-self.order[1], self.order[1]+1, dtype=torch.int64, device=self._device)
         self.order_N = len(self.order_x)*len(self.order_y)
 
         # Lattice vector
